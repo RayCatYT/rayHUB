@@ -1,11 +1,27 @@
-local Flux = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/fluxlib.txt")()
+-- Init
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/GreenDeno/Venyx-UI-Library/main/source.lua"))()
+local rayhub = library.new("RayHUB")
 
-local win = Flux:Window("PREVIEW", "Baseplate", Color3.fromRGB(255, 110, 48), Enum.KeyCode.LeftControl)
-local tab = win:Tab("Tab 1", "http://www.roblox.com/asset/?id=6023426915")
-tab:Button("Kill all", "This function may not work sometimes and you can get banned.", function()
-Flux:Notification("Killed all players successfully!", "Alright")
+
+-- Settings Page
+local settingspage = venyx:addPage("Settings")
+local keybindsection = page:addSection("Keybinds")
+
+-- Settings
+-- Keys
+keybindsection:addKeybind("Toggle Keybind", Enum.KeyCode.Rshift, function()
+print("Activated Keybind")
+rayhub:toggle()
+end, function()
+print("Changed Keybind")
 end)
-tab:Label("This is just a label.")
-tab:Line()
-tab:Toggle("Auto-Farm Coins", "Automatically collects coins for you!", function(t)
-print(t)
+-- Theme
+rayhub:setTheme(Background, Color3.fromRGB(137, 207, 240))
+rayhub:setTheme(Glow, Color3.fromRGB(25, 25, 112))
+rayhub:setTheme(Accent, Color3.fromRGB(10, 10, 10))
+rayhub:setTheme(LightContrast, Color3.fromRGB(20, 20, 20))
+rayhub:setTheme(DarkContrast, Color3.fromRGB(21, 164, 232))
+rayhub:setTheme(TextColor, Color3.fromRGB(255, 255, 255)
+
+-- Final
+rayhub:SelectPage(rayhub.pages[1], true)
