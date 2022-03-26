@@ -5,4 +5,4 @@ RayHUB is a hub for many Roblox Exploits (like CocoHub it doesnt use its own scr
 Game support for many games
 
 # How to use
-Check HowToUse.txt
+Ring, Ring! Usage file is calling, they want their attention back!
