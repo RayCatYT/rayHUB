@@ -1,0 +1,21 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+
+-- Universal
+local Universal = Window:NewTab("Universal")
+local UniversalSection = Player:NewSection("Universal")
+
+PlayerSection:NewSlider("Walkspeed", "Changes the walkspeed", 250, 16, function(v)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+end)
+
+if game.PlaceId == 155615604 then
+    local Window = Library.CreateLib("Arsenal - RayHUB", "GrapeTheme")
+
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+    
+    MainSection:NewDropdown("Test", "Test", {"TEST1", "TEST2", "TEST3"}, function(v)
+    end)
+    
+end
